@@ -36,6 +36,11 @@ options = {  :discovery_url   => 'http://seeclickfix.com/open311/discovery',
 
  end
  op.parse!
-           
+
+if ARGV.size > 0
+  puts "Unexpected args: #{ARGV.join(" ")}"
+  abort
+end
+
 @session = Session.new(options)
 @session.valid? ? @session.run_tests : (puts op)
