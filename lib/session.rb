@@ -62,7 +62,7 @@ class Session
   end
   
   def self.endpoint_formats(endpoint)
-    endpoint.formats.is_a?(Array) ? endpoint.formats : Array(Session.unwrap(endpoint,'formats.format'))
+    endpoint.formats.is_a?(Array) ? endpoint.formats : Array(endpoint.formats.format)
   end
   
   def all_endpoints
