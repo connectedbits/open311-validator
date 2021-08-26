@@ -11,8 +11,8 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = ">= 1.3.5"
 
-  s.add_dependency "httparty", "0.16.4"
-  s.add_dependency "rspec", "3.8.0"
+  s.add_dependency "httparty", "0.8.1"
+  s.add_dependency "rspec", "2.7.0"
   
   s.files        = `git ls-files`.split("\n")
   s.executables  = `git ls-files`.split("\n").map{|f| f =~ /^bin\/(.*)/ ? $1 : nil}.compact
